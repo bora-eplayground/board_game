@@ -171,7 +171,8 @@ function createEvents() {
 
 function setupButtonAreas() {
   buttons = {
-    start: { x: width / 2 - 120, y: 520, w: 240, h: 64 },
+    // 시작 버튼을 기존보다 약 76px 아래로 이동
+    start: { x: width / 2 - 120, y: 596, w: 240, h: 64 },
 
     buy: { x: 980, y: 260, w: 210, h: 58 },
     sell: { x: 980, y: 340, w: 210, h: 58 },
@@ -226,36 +227,32 @@ function drawStartScreen() {
   textAlign(CENTER, CENTER);
   textSize(46);
   textStyle(BOLD);
-  text("주식왕 챌린지", width / 2, 165);
-
-  drawMiniBadge(width / 2 - 180, 112, 140, 34, "4인 턴제");
-  drawMiniBadge(width / 2 - 20, 112, 140, 34, "주식 보드게임");
-  drawMiniBadge(width / 2 + 140, 112, 140, 34, "교육형");
+  text("주식왕 챌린지", width / 2, 175);
 
   fill(...COLORS.text);
   textSize(22);
   textStyle(NORMAL);
-  text("입체감 있는 시장에서 주식을 사고팔며", width / 2, 235);
-  text("최종 자산 1위를 노리는 4인용 턴제 게임", width / 2, 268);
+  text("입체감 있는 시장에서 주식을 사고팔며", width / 2, 255);
+  text("최종 자산 1위를 노리는 4인용 턴제 게임", width / 2, 288);
 
-  drawPlasticIllustration(width / 2 + 180, 380);
+  drawPlasticIllustration(width / 2 + 180, 405);
 
-  drawInnerCard(width / 2 - 285, 320, 310, 190, COLORS.lavender, "게임 규칙");
+  drawInnerCard(width / 2 - 285, 330, 310, 190, COLORS.lavender, "게임 규칙");
 
   fill(...COLORS.text);
   textAlign(LEFT, TOP);
   textSize(17);
   textStyle(NORMAL);
-  text("• 종목을 선택한 뒤 매수 / 매도 / 패스를 누릅니다.", width / 2 - 255, 370, 250, 40);
-  text("• 행동 후 시장 이벤트가 발생해 주가가 변동됩니다.", width / 2 - 255, 410, 250, 40);
-  text("• 10라운드가 끝나면 총자산이 높은 플레이어가 승리합니다.", width / 2 - 255, 450, 250, 50);
+  text("• 종목을 선택한 뒤 매수 / 매도 / 패스를 누릅니다.", width / 2 - 255, 380, 250, 40);
+  text("• 행동 후 시장 이벤트가 발생해 주가가 변동됩니다.", width / 2 - 255, 420, 250, 40);
+  text("• 10라운드가 끝나면 총자산이 높은 플레이어가 승리합니다.", width / 2 - 255, 460, 250, 50);
 
   draw3DButton(buttons.start, "게임 시작", COLORS.blue, COLORS.blueDark);
 
   fill(...COLORS.subtext);
   textSize(15);
   textAlign(CENTER, CENTER);
-  text("Plastic / Shadow / Pastel Style", width / 2, 620);
+  text("Plastic / Shadow / Pastel Style", width / 2, 690);
 }
 
 function drawGameScreen() {
